@@ -1,0 +1,4 @@
+.root { -fx-base: #171a21; -fx-background: #11141a; -fx-text-fill: #f1f1f1; }
+.sidebar { -fx-background-color: #1f2530; }
+.label, .button, .text-field, .text-area { -fx-font-size: 13px; }
+.h2 { -fx-font-size: 18px; -fx-font-weight: bold; }
