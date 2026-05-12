@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.enterprise.soapdesk.ui.controller.DashboardController">
+    <left>
+        <VBox spacing="10" prefWidth="280" styleClass="sidebar">
+            <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+            <Label text="Projects" styleClass="h2"/>
+            <TreeView/>
+            <Button text="Variable Manager"/>
+            <Button text="Load Testing"/>
+            <Button text="Reports"/>
+        </VBox>
+    </left>
+    <center>
+        <VBox spacing="10" style="-fx-padding: 16;">
+            <HBox spacing="8">
+                <TextField fx:id="endpointField" promptText="Endpoint URL" HBox.hgrow="ALWAYS"/>
+                <TextField fx:id="actionField" promptText="SOAP Action" prefWidth="220"/>
+                <Button text="Execute" onAction="#onExecute"/>
+            </HBox>
+            <SplitPane dividerPositions="0.5">
+                <TextArea fx:id="requestEditor" promptText="SOAP XML request"/>
+                <TextArea fx:id="responseViewer" promptText="SOAP response"/>
+            </SplitPane>
+            <Label fx:id="metricsLabel" text="Status: - | 0 ms"/>
+        </VBox>
+    </center>
+</BorderPane>
